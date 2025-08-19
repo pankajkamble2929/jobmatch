@@ -11,19 +11,20 @@ connectDB();
 const app = express();
 
 const allowedOrigins = [
-  'http://localhost:5173',
-  process.env.FRONTEND_URL, // e.g., https://jobmatch.vercel.app
+  "http://localhost:5173",
+  "https://jobmatch-eight.vercel.app",
+  process.env.FRONTEND_URL
 ];
 
 // ✅ Enable CORS for frontend
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.some((o) => o === origin)) {
+      if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        console.log('❌ Blocked by CORS:', origin);
-        callback(new Error('Not allowed by CORS'));
+        console.log("❌ Blocked by CORS:", origin);
+        callback(new Error("Not allowed by CORS"));
       }
     },
     credentials: true,
