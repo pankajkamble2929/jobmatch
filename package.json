@@ -1,0 +1,11 @@
+{
+  "name": "job-match",
+  "version": "1.0.0",
+  "description": "Full-stack project with separate backend and frontend",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start-backend": "npm run dev --prefix backend",
+    "start-frontend": "npm run dev --prefix frontend"
+  }
+}
