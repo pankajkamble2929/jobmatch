@@ -1,4 +1,4 @@
-#JobMatch
+# JobMatch
 
 JobMatch is a job portal that connects job seekers with recruiters seamlessly. It provides features like job recommendations, notifications, job applications, and recruiter tools for posting jobs. Built with MERN stack and integrated with Socket.io for real-time notifications.
 
